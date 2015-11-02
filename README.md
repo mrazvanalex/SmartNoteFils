@@ -1,2 +1,6 @@
-# SmartNoteFils
-Mobile Development Project
+# Team
+
+Andreea Dragu
+Bianca Barbu
+Merdescu Razvan
+Ionita Vlad
