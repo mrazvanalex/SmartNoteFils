@@ -1,6 +1,12 @@
-<!-- TEAM ForkLIFT -->
+# SmartNote
+ToDo List Project
 
-#Andreea Dragu
-#Bianca Barbu
-#Merdescu Razvan
-#Ionita Vlad
+Team : 1232 FILS
+
+Dragu Andreea
+
+Barbu Bianca
+
+Merdescu Razvan
+
+Ionita Vlad
