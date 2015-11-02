@@ -1,6 +1,6 @@
-# Team
+<!-- TEAM ForkLIFT -->
 
-Andreea Dragu
-Bianca Barbu
-Merdescu Razvan
-Ionita Vlad
+#Andreea Dragu
+#Bianca Barbu
+#Merdescu Razvan
+#Ionita Vlad
