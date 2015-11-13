@@ -5,7 +5,7 @@
 -The goals that have been achieved should also be stored separately in another list so I can browse over my achievements if I desire.
 -The application should be quick, responsive and stable!
  
-     -As a client, I want to use this application to help me organize my goals and to be easily informed about their state of completion.
+ -As a client, I want to use this application to help me organize my goals and to be easily informed about their state of completion.
 
 -The menu should be user-friendly so as to allow for quick and fluid navigation.
 -The menu which allows me to add goals should be versatile enough so as to allow me the freedom to customize the type of goal (examples: Name of the goal, 
