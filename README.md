@@ -11,6 +11,7 @@ Merdescu Razvan
 
 Ionita Vlad
 
+
 ```javascript
 
 function mega_cool_encrypt(string){
