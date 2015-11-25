@@ -11,7 +11,7 @@ Merdescu Razvan
 
 Ionita Vlad
 
-'''javascript
+```javascript
 
 function mega_cool_encrypt(string){
    //Must make an aeray of all chars of the string
@@ -34,4 +34,4 @@ function mega_cool_encrypt(string){
     }
 return newString;
 }
-'''
+```
