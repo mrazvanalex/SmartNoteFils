@@ -1,19 +1,5 @@
 // Initialize your app
-var myApp = new Framework7({
-    // Default title for modals
-    modalTitle: 'Note Smart',
- 
-    // If it is webapp, we can enable hash navigation:
-    pushState: true,
- 
-    // Hide and show indicator during ajax requests
-    onAjaxStart: function (xhr) {
-        myApp.showIndicator();
-    },
-    onAjaxComplete: function (xhr) {
-        myApp.hideIndicator();
-    }
-});
+var myApp = new Framework7();
 // Export selectors engine
 var $$ = Dom7;
 
