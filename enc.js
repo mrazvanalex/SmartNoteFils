@@ -1,4 +1,4 @@
-```Javascript
+```JS
 
 function mega_cool_encrypt(string){
     //Must make an aeray of all chars of the string
