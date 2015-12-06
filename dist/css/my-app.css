@@ -1,0 +1,24 @@
+.redBG{
+	background-color:#E64C4C;
+}
+.centerImg{
+	text-align:center;
+	width:auto;
+	height:auto;
+}
+.white{
+	color:#fff;
+}
+.fitText{
+	width:90%;
+	text-align:center;
+	margin:0 auto;
+}
+.loginButton{
+	background-color:#8d3333;
+	color:#f78787;
+	font-size:22px;
+	font-weight:300;
+	height:50px;
+	line-height:50px;
+}
