@@ -1,4 +1,4 @@
-```Javascript
+
 function mega_cool_encrypt(string){
    //Must make an aeray of all chars of the string
    var array= [];
@@ -259,4 +259,3 @@ function mega_cool_decrypt(string){
 console.log(newString);
 }
 mega_cool_encrypt("mare bagabont");
-```
