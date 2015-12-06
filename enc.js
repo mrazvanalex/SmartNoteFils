@@ -1,4 +1,4 @@
-```javascript
+'''javascript
 function mega_cool_encrypt(string){
     //Must make an aeray of all chars of the string
 -   var areay=array();
@@ -271,4 +271,4 @@ function mega_cool_encrypt(string){
  }
 +mega_cool_encrypt("mare bagabont");
 mega_cool_decrypt(mega_cool_encrypt("mare bagabont"));
-```
+'''
