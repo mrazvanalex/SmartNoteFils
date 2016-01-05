@@ -1,6 +1,29 @@
 .redBG{
 	background-color:#E64C4C;
 }
+.left{
+        float:left;
+}
+.right{
+        float:right;
+}
+#container{
+        margin-top:30px;
+}
+.list-item{
+        height:80px;
+}
+.red{
+        background-color: #ab1818;
+}
+.yellow{
+        background-color:#c4be24;
+}
+.myList{
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
+}
 .centerImg{
 	text-align:center;
 	width:auto;
