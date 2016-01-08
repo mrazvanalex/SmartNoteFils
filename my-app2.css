@@ -1,0 +1,299 @@
+@font-face{
+    font-family:Harlow Solid Italic;
+    src:
+        url('Harlow Solid Italic Italic.ttf') format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*-------Login screen---------*/
+.centerImg{
+    text-align:center;
+    width:auto;
+    height:auto;
+}
+.fitText{
+    width:97%;
+    text-align:center;
+    margin:0 auto;
+}
+.loginButton{
+    background-color:#8d3333;
+    color:#f78787;
+    font-size:22px;
+    font-weight:300;
+    height:50px;
+    line-height:50px;
+}
+
+/*----------Colors-----------*/
+.white{
+    color:#fff;
+}
+
+.redBG{
+    background-color:#E64C4C;
+}
+
+.red{
+    color:#8d3333;
+}
+
+.red-task{
+    background-color: #ff1a1a;
+    border:red;
+}
+.yellow-task{
+    background-color:#fff53f;
+    border:yellow;
+}
+
+.green-task{
+    background-color:#4dff4d;
+    border:lawngreen;
+} 
+
+.orange-task{
+    background-color:#ffa31a ;
+    border:#ffa31a;
+}
+
+
+/*--------------Positions------------*/
+.left{
+    float:left;
+}
+
+.left1{
+    float:left;
+    margin-left:-10%;
+}
+
+.right{
+    float:right;
+}
+
+#container{
+    padding:2px;
+}
+
+/*Positions of the 'x' buttons in the task list*/
+.close-red{
+    margin-top:1.7%;
+}
+
+.close{
+    margin-top:-2.4%;
+}
+
+.margin_border{
+    margin-left:20px;
+}
+
+/*----------Elements of tasks.html-------*/
+.top-bar-text{
+    color:red;
+    font-size:19px;
+    margin-top:-3%;
+    font-weight: bold;
+    font-family:Harlow Solid Italic;
+}
+
+.list-item{
+    height:53px;
+    color:white;
+    font-size:22px;
+    font-weight:300;
+    line-height:50px;
+    margin-right:auto;
+    margin-left:auto;
+    font-family:Verdana;
+}
+
+ul{
+    list-style-type:none;
+    padding:2px; 
+}
+
+ul li{
+    margin-top:-4.3%;
+    padding:0px 15px 0px 19px;
+}
+
+.myList{
+    width:100%;
+}
+
+.addNoteButton{
+    width:99%;
+    margin-top:-6%;
+    margin-left:1%;
+    background-color:black;
+    opacity:0.9;
+    font-size:20px;
+    font-family:Verdana;
+    height:50px;
+    line-height:36px;
+}
+
+/*------------Add a New Task Screen---------*/
+.datum{
+    font-size:14px;
+    margin-top:-15.6%;
+    margin-right:-2%;
+    font-family:monospace;
+}
+.delete-note{
+    font-size:21px;
+    font-family:monospace;
+    opacity:0.7;
+    color:grey;
+}
+
+.fitText{
+    width:90%;
+    text-align:center;
+    margin:0 auto;
+}
+
+.date-item{
+    overflow:auto;
+    height:60px;
+    line-height:60px;
+    display:block;
+}
+.date-item1{
+    overflow:auto;
+    height:60px;
+    line-height:60px;
+    display:block;
+}
+.date-item input{
+    float:left;
+    line-height: 60px;
+    height:60px;
+    width:18% !important;
+}
+.date-item1 input{
+    float:left;
+    line-height: 60px;
+    height:60px;
+    width:18.15% !important;
+}
+.boss{
+    height:60px !important;
+}
+.date-item input:active{
+    float:left;
+    line-height:60px !important;
+    width:18% !important;
+}
+.date-item1 input:active{
+    float:left;
+    line-height:60px !important;
+    width:18% !important;
+}
+#dates ul{
+    overflow:auto;
+    padding:0;
+}
+.text_area{
+    padding:0 0 0 30em;
+}
+#circle {
+    overflow: auto;
+    position: absolute;
+    background-color: #00CC00;
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.list{
+    float:left;
+    display:block;
+    overflow:auto;
+    width:14%;
+}
+.list input{
+    float:left;
+    line-height: 60px;
+    height:60px;
+    width:14% !important;
+}
+#circle1 {
+    overflow: auto;
+    float:left;
+    position: absolute;
+    background-color: #99FF33;
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+#circle2 {
+    float:left;
+    overflow: auto;
+    position: absolute;
+    background-color: #FFFF00;
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+#circle2 {
+    overflow: auto;
+    float:left;
+    position: absolute;
+    background-color: #FF9900;
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+#circle2 {
+    overflow: auto;
+    float:left;
+    position: absolute;
+    background-color: #FF0000;
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.addNoteBtn{
+    background-color:#8d3333;
+    color:#FFFFFF;
+    font-size:20px;
+    font-weight:300;
+    height:50px;
+    line-height:50px;
+    width:80%;
+    text-align:center;
+    margin:40px;
+}
+.tasks{
+    background-color:#8d3333;
+    font-size:20px;
+    font-weight:300;
+    height:50px;
+    line-height:50px;
+    width:80%;
+    margin:40px;
+}
+#item_title {
+    background-color:#8d3333 !important;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;  
+}
+.margin_border{
+    margin-left:20px;
+}
+.element{
+    clear:both;
+}
