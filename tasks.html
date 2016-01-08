@@ -1,29 +1,63 @@
-
 <!-- We don't need full layout here, because this page will be parsed with Ajax-->
 <!-- Top Navbar-->
 <div class="pages">
-        <!-- Page, data-page contains page name-->
-        <div data-page="services" class="page">
-                <!-- Scrollable page content-->
-                <div class="page-content">
-                        <div class="content-block">
-                                <p>Go <a href="#" class="back">back</a>
-                                        <div id="wrapper">
-                                                <div id="top_bar">
-                                                        <span class="left">Happy user</span>
-                                                        <span class="right">Task List</span>
-                                                </div>
-                                                <div id="container">
-                                                        <ul class="myList">
-                                                                <select>
-                                                                        <option>Mare barosaneala</option>
-                                                                        <option>Mica barosaneala</option>
-
-                                                                </select>
-                                                        </ul>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
+    <!-- Page, data-page contains page name-->
+    <div data-page="services" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block">
+                <div id="wrapper">
+                    <div id="top-bar">
+                        <span class="left top-bar-text">Happy User</span>
+                        <span class="right top-bar-text ">Task List</span>
+                    </div>
+                    <div id="container">
+                        <ul class="myList">
+                            <li class="red-task">
+                                <button class="delete-note right red-task close-red-task">x</button>
+                                <p class="list-item">Eat mom's cake</p>
+                                <p class="datum right white">9 Feb</p>
+                            </li>
+                            <li class="red-task">
+                                <button class="delete-note right red-task close">x</button>
+                                <p class="list-item">Make a cake</p>
+                                <p class="datum right white">9 Ian</p>
+                            </li>
+                            <li class="yellow-task">
+                                <button class="delete-note right yellow-task close">x</button>
+                                <p class="list-item">Go to the gym</p>
+                                <p class="datum right white">10 Ian</p>
+                            </li>
+                            <li class="yellow-task">
+                                <button class="delete-note right yellow-task close">x</button>
+                                <p class="list-item">Pass the exam</p>
+                                <p class="datum right white">11 Ian</p>
+                            </li>
+                            <li class="green-task">
+                                <button class="delete-note right green-task close">x</button>
+                                <p class="list-item">Go to the gym</p>
+                                <p class="datum right white">12 Ian</p>
+                            </li>
+                            <li class="green-task">
+                                <button class="delete-note right green-task close">x</button>
+                                <p class="list-item">Do something</p>
+                                <p class="datum right white">9 Feb</p>
+                            </li>
+                            <li class="orange-task">
+                                <button class="delete-note right orange-task close">x</button>
+                                <p class="list-item">Do something</p>
+                                <p class="datum right white">9 Feb</p>
+                            </li>
+                            <li class="orange-task">
+                                <button class="delete-note right orange-task close">x</button>
+                                <p class="list-item">Do something</p>
+                                <p class="datum right white">9 Feb</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="addNoteButton white">Add a new note</button>
                 </div>
+            </div>
         </div>
+    </div>
+</div>
