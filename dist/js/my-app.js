@@ -81,7 +81,19 @@ $$(document).on('pageInit', function (e) {
                         var end_date = oForm.elements['end_date_day'].value + "/" + oForm.elements['end_date_month'].value + "/" + oForm.elements['end_date_year'].value;
                         var description = oForm.elements['description'].value;
                         var difficulty = oForm.elements['diff'].value;
+                        // PREPARE FOR SPAGHETTI CODE
                         if(valid(oForm)){
+                                var task={
+                                        "name":name,
+                                        "type":type,
+                                        "start_date":start_date,
+                                        "end_date":end_date,
+                                        "description":description,
+                                        "importance":difficulty
+                                };
+                                // update tasks
+                                tasks = thisuser.tasks;
+                                tasks.push(task);
                                 usersDB.get(thisuser.email, function (error, doc) {
                                         if (error) {
                                                 console.log("Some ajax went wrong");
@@ -95,53 +107,21 @@ $$(document).on('pageInit', function (e) {
                                                         "importance":difficulty
                                                 };
                                                 // update tasks
-                                                var tasks = doc.tasks;
-                                                tasks.push(task);
                                                 doc.tasks=tasks;
-                                                console.log("TASKS:"); //debugging
-                                                console.log(doc.tasks);
                                                 thisuser = doc;
-                                                console.log("USER:");
-                                                console.log(thisuser);
                                                 return usersDB.put(doc);
+
                                         }
+
                                 });
+                                thisuser.tasks=tasks;
+                                console.log(thisuser);
+                                mainView.router.loadPage("tasks.html");
                         }else{
                                 console.log("Form not valid. Can not go further. Throw some error");
                                 alert("You missed something");
                         }
-
-                        mainView.router.loadPage("tasks.html");
                 });
-                // fetch user
-                /*
-
-                usersDB.get(thisuser.email).then(function (doc) {
-                        //define this task
-                        var task={
-                                "name":name,
-                                "type":type,
-                                "start_date":start_date,
-                                "end_date":end_date,
-                                "description":description,
-                                "importance":difficulty
-                        };
-                        // update tasks
-                        var tasks = doc.tasks;
-                        tasks.push(task);
-                        doc.tasks=tasks;
-                        console.log("TASKS:"); //debugging
-                        console.log(doc.tasks);
-                        thisuser = doc;
-                        console.log("USER:");
-                        console.log(thisuser);
-                        return usersDB.put(doc);
-                }).then(function (doc) {
-                        // fetch user again
-
-                });
-
-                */
 
 
                 // on form submit, take data.
