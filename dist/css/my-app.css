@@ -1,6 +1,15 @@
 .redBG{
 	background-color:#E64C4C;
 }
+html{
+        color:#fff;
+}
+body{
+        color:#fff;
+}
+.page-content{
+        background-color:#E64C4C;
+}
 .left{
         float:left;
 }
