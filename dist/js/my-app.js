@@ -37,6 +37,8 @@ $$(document).on('pageInit', function (e) {
                 // Now we can generate some dummy list
                 var listHTML = '<ul>';
                 //Debugging message
+                console.log("This user:");
+                console.log(thisuser);
                 console.log("Displaying this user's tasks");
                 //Displaying tasks
                 for (var i = 0; i < listCount; i++) {
@@ -79,10 +81,67 @@ $$(document).on('pageInit', function (e) {
                         var end_date = oForm.elements['end_date_day'].value + "/" + oForm.elements['end_date_month'].value + "/" + oForm.elements['end_date_year'].value;
                         var description = oForm.elements['description'].value;
                         var difficulty = oForm.elements['diff'].value;
-                        console.log(type+"\n"+name+"\n"+start_date+"\n"+end_date+"\n"+description+"\n"+difficulty)
-                        //mainView.router.loadPage("tasks.html");
+                        if(valid(oForm)){
+                                usersDB.get(thisuser.email, function (error, doc) {
+                                        if (error) {
+                                                console.log("Some ajax went wrong");
+                                        } else {
+                                                var task={
+                                                        "name":name,
+                                                        "type":type,
+                                                        "start_date":start_date,
+                                                        "end_date":end_date,
+                                                        "description":description,
+                                                        "importance":difficulty
+                                                };
+                                                // update tasks
+                                                var tasks = doc.tasks;
+                                                tasks.push(task);
+                                                doc.tasks=tasks;
+                                                console.log("TASKS:"); //debugging
+                                                console.log(doc.tasks);
+                                                thisuser = doc;
+                                                console.log("USER:");
+                                                console.log(thisuser);
+                                                return usersDB.put(doc);
+                                        }
+                                });
+                        }else{
+                                console.log("Form not valid. Can not go further. Throw some error");
+                                alert("You missed something");
+                        }
+
+                        mainView.router.loadPage("tasks.html");
+                });
+                // fetch user
+                /*
+
+                usersDB.get(thisuser.email).then(function (doc) {
+                        //define this task
+                        var task={
+                                "name":name,
+                                "type":type,
+                                "start_date":start_date,
+                                "end_date":end_date,
+                                "description":description,
+                                "importance":difficulty
+                        };
+                        // update tasks
+                        var tasks = doc.tasks;
+                        tasks.push(task);
+                        doc.tasks=tasks;
+                        console.log("TASKS:"); //debugging
+                        console.log(doc.tasks);
+                        thisuser = doc;
+                        console.log("USER:");
+                        console.log(thisuser);
+                        return usersDB.put(doc);
+                }).then(function (doc) {
+                        // fetch user again
+
                 });
 
+                */
 
 
                 // on form submit, take data.
@@ -92,6 +151,37 @@ $$(document).on('pageInit', function (e) {
         }
 });
 
+function valid(oForm){
+        var error = false;
+        if(oForm.elements['type'].value == "" || oForm.elements['type'].value == " "){
+                error=true;
+                console.log("Bad type");//debugging
+        }else if(oForm.elements['name'].value == "" || oForm.elements['name'].value == " "){
+                error=true;
+                console.log("Bad name") //debugging
+        }
+        else if(oForm.elements['start_date_day'].value == "" || oForm.elements['start_date_day'].value == " " || oForm.elements['start_date_year'].value == ""){
+                error=true;
+                console.log("Bad start_date") //debugging
+        }
+        else if(oForm.elements['end_date_day'].value == "" || oForm.elements['end_date_day'].value == " " || oForm.elements['end_date_year'].value == ""){
+                error=true;
+                console.log("Bad end_date") //debugging
+        }
+        else if(oForm.elements['description'].value == "" || oForm.elements['description'].value == " "){
+                error=true;
+                console.log("Bad description") //debugging
+        }
+        else if(oForm.elements['diff'].value == "" || oForm.elements['diff'].value == " "){
+                error=true;
+                console.log("Bad difficulty") //debugging
+        }
+        if(error){
+                return false;
+        }else{
+                return true;
+        }
+}
 // Add view
 var mainView = myApp.addView('.view-main', {
         // Because we use fixed-through navbar we can enable dynamic navbar
@@ -128,23 +218,14 @@ function CheckLogin(){
                         "_id": email,
                         "email": email,
                         "password":password,
-                        "tasks": [{
-                                "id":1, //kinda useless here
-                                "name":"Bake for mom",
-                                "type":"Task",
-                                "start_date":"12312521",
-                                "end_date":"12314125",
-                                "description":"Some description",
-                                "importance":"low"
-                        }
-                ]};
-                //Store user Object;
-                usersDB.put(user);
+                        "tasks": []};
+                        //Store user Object;
+                        usersDB.put(user);
 
-                //Set user Object;
-                thisuser = user;
+                        //Set user Object;
+                        thisuser = user;
 
-        });
-        mainView.router.loadPage("tasks.html");
+                });
+                mainView.router.loadPage("tasks.html");
 
-}
+        }
