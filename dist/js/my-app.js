@@ -30,6 +30,10 @@ var myApp = new Framework7({
 $$(document).on('pageInit', function (e) {
         var page = e.detail.page;
         // Code for About page
+        $$("#task_list_addNew").on('click', function (e){
+                mainView.router.loadPage("new_task.html");
+        });
+
         if (page.name === 'tasks') {
                 console.log("On tasks page");
                 // Let's see how many tasks this user has and get them
@@ -43,7 +47,7 @@ $$(document).on('pageInit', function (e) {
                 //Displaying tasks
                 for (var i = 0; i < listCount; i++) {
                         switch(thisuser.tasks[i].importance){
-                                case 'easy':
+                                case 'very_easy':
                                 taskType = "green-task";
                                 break;
                                 case 'light':
@@ -55,20 +59,22 @@ $$(document).on('pageInit', function (e) {
                                 case 'medium':
                                 taskType = "orange-task";
                                 break;
-                                case 'hard':
+                                case 'extra':
                                 taskType = "red-task";
                                 break;
                                 default:
                                 taskType = "green-task";
                                 break;
                         }
-                        var textList = '<li class="'+ taskType +'"><button class="delete-note right red-task close-red-task">x</button><p class="list-item">'+ thisuser.tasks[i].name +'</p></li>'
+                        var textList = '<li class="'+ taskType +'"><button class="delete-note right red-task close-red-task">x</button><p class="list-item">'+ thisuser.tasks[i].name +'</li>'
                         listHTML += textList;
                 }
 
                 listHTML += '</ul>';
                 // And insert generated list to page content
                 $$(page.container).find('.myList').append(listHTML);
+                topBarHTML='<span class="whiteText left top-bar-text">'+thisuser.email+'</span>'
+                $$(page.container).find('#top-bar').append(topBarHTML);
         }
         // Code for addTask Page
         if (page.name === 'new_task') {

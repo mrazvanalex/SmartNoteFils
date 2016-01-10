@@ -242,6 +242,10 @@ textarea{
         font-weight:500;
         font-style:Open Sans;
 }
+.top-bar-text{
+        font-size:21px;
+        font-family:Indie Flower !important;
+}
 #taskSelector{
         width:60%;
         height:35px;
