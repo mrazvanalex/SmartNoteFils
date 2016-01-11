@@ -60,13 +60,13 @@ $$(document).on('pageInit', function (e) {
                                 taskType = "orange-task";
                                 break;
                                 case 'extra':
-                                taskType = "red-task";
+                              taskType = "red-task";
                                 break;
                                 default:
                                 taskType = "green-task";
                                 break;
                         }
-                        var textList = '<li class="'+ taskType +'"><button class="delete-note right red-task close-red-task">x</button><p class="list-item">'+ thisuser.tasks[i].name +'</li>'
+                        var textList = '<li id="'+i+'" class="deleteMe '+ taskType +'"><button class="delete-note right close-red-task">x</button><p class="list-item">'+ thisuser.tasks[i].name +'</li>'
                         listHTML += textList;
                 }
 
@@ -75,6 +75,33 @@ $$(document).on('pageInit', function (e) {
                 $$(page.container).find('.myList').append(listHTML);
                 topBarHTML='<span class="whiteText left top-bar-text">'+thisuser.email+'</span>'
                 $$(page.container).find('#top-bar').append(topBarHTML);
+
+                $$(".deleteMe").on('click', function (e){
+                        index=$$(this).attr("id");
+                        usersDB.get(thisuser.email, function (error, doc) {
+                                if (error) {
+                                        console.log("Some ajax went wrong");
+                                } else {
+                                        // get tasks
+                                        tasks = thisuser.tasks;
+                                        //Remove element from array
+                                        tasks.splice(index, 1);
+                                        console.log("I removed task"+index);
+                                        console.log(thisuser.tasks[i]);
+                                        //Update new tasks for DB
+                                        doc.tasks=tasks;
+                                        //Update thisuser for our usage.
+                                        thisuser = doc;
+                                        //Update these tasks in DB.
+                                        var element = document.getElementById(index);
+                                        element.parentNode.removeChild(element);
+                                        return usersDB.put(doc);
+                                }
+                        });
+                        mainView.router.loadPage("tasks.html");
+
+
+                });
         }
         // Code for addTask Page
         if (page.name === 'new_task') {
