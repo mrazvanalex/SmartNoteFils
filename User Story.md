@@ -1,9 +1,0 @@
-
-1-The first time our client uses the app, he must enter some credentials, after entering them, he will be prompted to a welcome screen that will also display a list of all the client's uncompleted achievements, along with their respective difficulties along with a button called " Edit notes " that will direct the client towards the next screen.
-If the app was previously used by the client and he opted for his credentials to be saved, he will be prompted directly to the welcome screen.
-
-2-After the client presses on the "Edit notes" button, the app will display the client's objectives in a colorful list. The color of each goal's rectangle will be dictated by the difficulty of each objective. The colors are "Red" "Orange" "Yellow" "Light Green" and "Green" in the descending order of difficulty! The screen will also have an "Add note" button that will allow the client to create another goal that will be added to the list.
-
-3-After the client presses the "Add note" button, the app will display a drop-down menu that will allow the user to select between different types of objectives such as "Task", "Family" "Health" "Personal Development" "Relationship" "Wealth" "Spirituality" "Socialising". A box in which the client will set the name of the goal along with two date boxes in which the client will set the goal's initial date, and deadline of the objective. The client will also see a description box that will allow for a short description of the objective. On the bottom of the screen, the client will see 5 circles arranged in a horizontal fashion and colored in the aforementioned spectrum. The client will select one of this circles in order to assign a difficulty level to the goal. Finally, on the bottom of the screen there will be an "Add Note" button that will save the new task and add it to the list.
-
-
