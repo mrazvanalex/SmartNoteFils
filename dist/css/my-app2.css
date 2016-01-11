@@ -116,8 +116,8 @@ ul{
     margin-top:-6%;
     margin-left:1%;
     background-color:transparent;
-    outline:0;
-    border:0;
+    outline:none;
+    border:none;
     opacity:0.9;
     font-size:20px;
     font-family:Verdana;
