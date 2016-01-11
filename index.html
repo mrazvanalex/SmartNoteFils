@@ -8,13 +8,9 @@
 	<title>Note Smart</title>
 	<!-- Path to Framework7 Library CSS-->
 	<link rel="stylesheet" href="dist/css/framework7.material.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="dist/css/framework7.material.colors.min.css">
 	<!-- Path to your custom app styles-->
 	<link rel="stylesheet" href="dist/css/my-app.css">
-        <link rel="stylesheet" href="dist/css/my-app2.css">
-        <link rel="stylesheet" href="dist/css/my-appB.css">
-        <script type="text/javascript" src="dist/js/pouchdb-5.1.0.min.js"></script>
 </head>
 <body>
 	<!-- Status bar overlay for fullscreen mode-->
@@ -31,56 +27,51 @@
 				<div data-page="index" class="page">
 					<!-- Scrollable page content-->
 					<div class="page-content redBG">
-						<!-- SmartNote Logo -->
+					<!-- SmartNote Logo -->
 						<div class="centerImg"><img src="logofirstScreen.png"></div>
-						<!-- SmartNote text -->
+					<!-- SmartNote text -->
 						<div class="center white fitText">
 							<p>Welcome to NoteSmart, we didn't figure out what to say here yet!</p>
 						</div>
-						<form name="loginform" id="loginform">
-        						<div class="list-block">
-        							<ul>
-        								<li>
-        									<div class="item-content">
-        										<div class="item-inner">
-        											<div class="item-input">
-        												<input type="email" name="email" placeholder="E-mail">
-        											</div>
-        										</div>
-        									</div>
-        								</li>
-        								<li>
-        									<div class="item-content">
-        										<div class="item-inner">
-        											<div class="item-input">
-        												<input type="password" name="password" placeholder="Password">
-        											</div>
-        										</div>
-        									</div>
-        								</li>
-        							</ul>
-        						</div>
-        						<div class="content-block">
-        							<a href="" onclick="CheckLogin()"class="button form-to-json loginButton">Login / Register</a>
-        						</div>
-						</form>
+						<div class="list-block">
+							<ul>
+								<li>
+									<div class="item-content">
+										<div class="item-inner"> 
+											<div class="item-input">
+												<input type="email" placeholder="E-mail">
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-content">
+										<div class="item-inner"> 
+											<div class="item-input">
+												<input type="password" placeholder="Password">
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
 						<!--
 						<div class="list-block">
 							<ul>
 								<li><a href="tasks.html" class="item-link">
 									<div class="item-content">
-										<div class="item-inner">
+										<div class="item-inner"> 
 											<div class="item-title">09 November: Present this first page</div>
 										</div>
 									</div></a></li>
 									<li><a href="tasks.html" class="item-link">
-										<div class="item-content">
+										<div class="item-content"> 
 											<div class="item-inner">
 												<div class="item-title">09 November : Present task editor</div>
 											</div>
 										</div></a></li>
 									<li><a href="tasks.html" class="item-link">
-										<div class="item-content">
+										<div class="item-content"> 
 											<div class="item-inner">
 												<div class="item-title">Tasks</div>
 											</div>
@@ -89,14 +80,18 @@
 								</ul>
 							</div>
 							-->
+							<div class="content-block">
+							  	<a href="#" class="button form-to-json loginButton">Login / Register</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- Path to Framework7 Library JS-->
-	<script type="text/javascript" src="dist/js/framework7.min.js"></script>
-	<!-- Path to your app js-->
-	<script type="text/javascript" src="dist/js/my-app.js"></script>
-</body>
-</html>
+
+		<!-- Path to Framework7 Library JS-->
+		<script type="text/javascript" src="dist/js/framework7.min.js"></script>
+		<!-- Path to your app js-->
+		<script type="text/javascript" src="dist/js/my-app.js"></script>
+	</body>
+	</html>
