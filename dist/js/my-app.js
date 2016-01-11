@@ -76,8 +76,8 @@ $$(document).on('pageInit', function (e) {
                 topBarHTML='<span class="whiteText left top-bar-text">'+thisuser.email+'</span>'
                 $$(page.container).find('#top-bar').append(topBarHTML);
 
-                $$(".deleteMe").on('click', function (e){
-                        index=$$(this).attr("id");
+                $$(".delete-note").on('click', function (e){
+                        index=$$(this).parent().attr("id");
                         usersDB.get(thisuser.email, function (error, doc) {
                                 if (error) {
                                         console.log("Some ajax went wrong");
