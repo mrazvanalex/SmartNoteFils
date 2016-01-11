@@ -1,0 +1,89 @@
+<div class="pages navbar-through toolbar-through">
+        <!-- Page, data-page contains page name-->
+        <div data-page="new_task" class="page">
+                <!-- Scrollable page content-->
+                <div class="page-content redBG">
+                        <form id="addTaskForm">
+                        <div id="select_task_area">
+
+                                <p class="item-title">Type: </p>
+                                <div class="item-input">
+                                        <select name ="type" id="taskSelector">
+                                                <option name="task">Task</option>
+                                                <option name="bday">Birthday</option>
+                                                <option name="meeting">Meeting</option>
+                                        </select>
+                                </div>
+                        </div>
+                        <div id="content_task_area">
+                                <input id="task_name" type="text" name="name" placeholder="e.g. Make a cake 4 mom">
+                                <div id="dates">
+                                        <ul>
+                                                <li>
+                                                        <span> Start date:</span>
+                                                        <input class="boss" type="number" name="start_date_day" min="1" max="31" placeholder="19">
+                                                        <span>/</span>
+                                                        <input class="boss" type="number"  name="start_date_month" min="1" max="12" placeholder="10">
+                                                        <span>/</span>
+                                                        <input class="boss" type="number" name="start_date_year" min="1930" max="2016" placeholder="1994">
+                                                </li>
+                                                <div class="clearfix"></div>
+                                                <li>
+                                                        <span> End date: </span>
+                                                        <input class="boss" type="number" name="end_date_day" min="1" max="31" placeholder="19">
+                                                        <span>/</span>
+                                                        <input class="boss" type="number"  name="end_date_month" min="1" max="12" placeholder="10">
+                                                        <span>/</span>
+                                                        <input class="boss" type="number" name="end_date_year" min="1930" max="2016" placeholder="1994">
+                                                </li>
+                                        </ul>
+                                </div>
+                        </div>
+
+                        <div class="margin_border">
+                                <textarea rows="8" name="description" cols="45" > Add a description </textarea>
+                        </div>
+
+                        <ul id="taskDiffList">
+                                <li>
+                                        <div class="bubleContainer">
+                                                <span class="bubleDiff">Very Easy </span>
+                                                <div class="bubleElem green"></div>
+                                                <input type="radio" value="very_easy" name="diff">
+                                        </div>
+                                </li>
+                                <li>
+                                        <div class="bubleContainer">
+                                                <span class="bubleDiff">Light</span>
+                                                <div class="bubleElem lime"></div>
+                                                <input type="radio" value="light" name="diff">
+                                        </div>
+                                </li>
+                                <li>
+                                        <div class="bubleContainer">
+                                                <span class="bubleDiff">Normal </span>
+                                                <div class="bubleElem yellow"></div>
+                                                <input type="radio" value="normal" name="diff">
+                                        </div>
+                                </li>
+                                <li>
+                                        <div class="bubleContainer">
+                                                <span class="bubleDiff">Medium </span>
+                                                <div class="bubleElem orange"></div>
+                                                <input type="radio" value="medium" name="diff">
+                                        </div>
+                                </li>
+                                <li>
+                                        <div class="bubleContainer">
+                                                <span class="bubleDiff">Extra </span>
+                                                <div class="bubleElem red"></div>
+                                                <input type="radio" value="extra" name="diff">
+                                        </div>
+                                </li>
+                        </ul>
+
+        <button type="button" id="submit_task_form" class="center addNoteBtn white">Add Note</button>
+</form>
+</div>
+</div>
+</div>
